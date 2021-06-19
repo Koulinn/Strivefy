@@ -26,7 +26,7 @@ function createHtmlContent(
 
 // Generate Li content sidebar
 const btnCreatePlaylist = document.querySelector(
-  "#nav-sideBar > div.sub-menu > ul > li.d-flex.align-items-center.my-2.w-100 > button"
+    '#nav-sideBar > div.sub-menu.mt-4 > ul > li:nth-child(1) > button'
 );
 btnCreatePlaylist.addEventListener("click", function () {
   console.log("clickdsdss"),
