@@ -37,8 +37,13 @@ p{
 
 }
 
+#nav-sideBar #main-logo{
+  color: white;
+  width: 128px;
+}
 
-#nav-sideBar button{
+
+#nav-sideBar button, #download-app{
   font-size: 13px;
   font-weight: 500;
   line-height: 14px;
@@ -66,9 +71,8 @@ p{
   background-color: rgba(158, 158, 158, 0.308);
 }
 
-
 #scrolling-menu > div > ul{
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: .7px;
   font-weight: 300;
   line-height: 30px;
@@ -88,26 +92,18 @@ p{
 
 #nav-sideBar{
   height: 100%;
-}
-
-.mod-navBar {
   padding-top: 24px;
   max-width: 232px;
+  min-width: 232px;
   background-color: #000000;
 }
 
-.mod-logo {
-  height: 40px;
-  max-width: 131px;
-  width: 100%;
-  margin-left: 24px;
-  margin-bottom: 18px;
-}
+
+
 
 
 /* color and fill start */
 
-.mod-logo > svg,
 .nav-menu > li,
 .nav-menu > li > a,
 .mod-color-white,
@@ -120,7 +116,7 @@ p{
 }
 
 .square.mod-BGC > svg,
-.download-app svg,
+#download-app svg,
 .scrolling-svg > svg,
 .footer-album-icons > div > svg,
 #player-controls > .icon-target-area > svg,
@@ -151,12 +147,17 @@ p{
 
 #scrolling-menu {
   width: 240px;
-  height: 484px;
+  max-height: 91%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  max-height: -webkit-fill-available;
 }
-
+ #savedAlbums > div:first-child{
+   height: -webkit-fill-available;
+ }
 
 .scroll {
-  color: seashell;
   overflow: auto;
   scroll-behavior: smooth;
   white-space: nowrap;
@@ -164,6 +165,7 @@ p{
 }
 
 .scroll > ul > li {
+  color: white;
   list-style: none;
   padding-right: 32px;
 }
