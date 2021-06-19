@@ -358,9 +358,10 @@ p {
 }
 
 #topBarReturn > button{
-  background-color: black;
-  border: 0px;
-  border-radius: 50%;
+  background: #181818;
+box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4), -9px -9px 16px rgba(73, 73, 73, 0.6);
+border-radius: 20px;
+  /* border-radius: 50%; */
   padding: 0px;
   width: 32px;
   height: 32px;
@@ -427,10 +428,11 @@ p {
 }
 
 #memberMenu .btn-upgrade {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 1px white solid;
+  background: #181818;
+    box-shadow: 9px 9px 16px rgb(0 0 0 / 40%), -9px -9px 16px rgb(73 73 73 / 60%);
+    border-radius: 20px;
   color: hsla(0, 0%, 100%, 0.85);
-  border: 1px solid hsla(0, 0%, 100%, 0.7);
+ 
   border-radius: 24px;
   white-space: nowrap;
   font-size: 12px;
@@ -441,13 +443,19 @@ p {
   text-align: center;
   text-transform: uppercase;
   transform: scale(1);
-  transition: all 500ms cubic-bezier(.3,0,0,1);
+  transition: all 700ms cubic-bezier(.3,0,0,1);
 }
 
 #memberMenu .btn-upgrade:hover {
   color: white;
   border-color: white;
-  transform: scale(1.2);
+  transform: scale(1.05);
+}
+
+#memberMenu .btn-upgrade:active{
+  background: radial-gradient(38.2% 50% at 50% 50%, #2E3134 0%, #292B2E 100%);
+border: 1px solid #272829;
+box-shadow: inset 2px 2px 4px
 }
 
 #topBarReturn > div > svg > polyline{
