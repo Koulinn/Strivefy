@@ -1,10 +1,10 @@
 /**
  * 
- * @param {string: HTML Tag} HTMLTag 
- * @param {Template Literal} innerText 
+ * @param {String} HTMLTag 
+ * @param {String} innerText 
  * @param {Array} ArrClassesToAdd 
- * @param {string: querySelector} HtmlNodeSelector 
- * @param {string: 'afterend', 'afterbegin', 'beforeend', 'beforebegin'} positionToInsert 
+ * @param {String} HtmlNodeSelector 
+ * @param {String} positionToInsert 
  */
 function createHtmlContent(HTMLTag, innerText, ArrClassesToAdd, HtmlNodeSelector, positionToInsert){
     let htmlTagCreated = document.createElement(`${HTMLTag}`)
