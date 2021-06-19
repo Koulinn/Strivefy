@@ -53,14 +53,30 @@ p{
   transition: opacity 0.2s linear, background-color 0.2s linear;
 }
 
-#nav-sideBar button:hover{
+#nav-sideBar button:hover, #nav-sideBar button:active, #scrolling-menu > div > ul > li:hover{
   opacity: 1;
 }
 
-#nav-sideBar button:active{
-  background-color: rgba(158, 158, 158, 0.308);
+#scrolling-menu > div > ul > li{
+  opacity: .7;
+  transition: opacity 0.2s linear, background-color 0.2s linear;
+}
 
-  
+#nav-sideBar button:active, #scrolling-menu > div > ul > li:active{
+  background-color: rgba(158, 158, 158, 0.308);
+}
+
+
+#scrolling-menu > div > ul{
+  font-size: 14px;
+  letter-spacing: .7px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+#nav-sideBar hr {
+  border-color: #363636;
+  width: 80%;
 
 }
 

@@ -33,7 +33,7 @@ btnCreatePlaylist.addEventListener("click", function () {
     createHtmlContent(
       "li",
       "Text Dynamically gen",
-      [],
+      [`w-100`, `pl-4`],
       "#nav-sideBar #scrolling-menu .scroll > ul",
       "beforeend"
     );
