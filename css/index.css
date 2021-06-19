@@ -1,6 +1,6 @@
 /* Rafa Css */
 
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;900&display=swap");
 
 
 body{
@@ -8,7 +8,9 @@ body{
 }
 
 h1 {
-
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 900;
 }
 
 h2{
@@ -34,6 +36,34 @@ h6{
 p{
 
 }
+
+
+#nav-sideBar button{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  letter-spacing: 1px;
+  outline: 0;
+  
+  
+  opacity: .7;
+  transition: opacity 0.2s linear, background-color 0.2s linear;
+}
+
+#nav-sideBar button:hover{
+  opacity: 1;
+}
+
+#nav-sideBar button:active{
+  background-color: rgba(158, 158, 158, 0.308);
+
+  
+
+}
+
 
 
 #allContentWrapper{
