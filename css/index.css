@@ -529,6 +529,12 @@ section h2:hover{
   text-decoration: underline;
 }
 
+section .section-text-aux{
+  color: hsla(0, 0%, 100%, 0.9);
+  font-size: 12px;
+  letter-spacing: .8px;
+}
+
 @media (min-width: 1400px){
   .d-xxl-flex{
     display: flex!important;
