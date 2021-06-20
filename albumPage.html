@@ -11,8 +11,9 @@
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/albumPage.css">
 
 
 
@@ -209,10 +210,29 @@
       </header>
 
       <section id="albumCover" class="row d-flex flex-column mt-3 py-0 px-4 m-0">
-        <div class=" col-12 jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Fluid jumbotron</h1>
-              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <div class=" col-12 jumbotron jumbotron-fluid bg-transparent p-0">
+            <div class="container d-flex p-0 m-0">
+              <div class="d-inline-block album-img">
+                <img src="https://m.media-amazon.com/images/I/71zHLmUXJ6L._SS500_.jpg" alt="">
+              </div>
+              <div class="d-flex flex-column justify-content-between mt-myMod ml-4">
+                <span class="seeMore"> PLAYLIST </span>
+                <h1 class="m-0">Love Bossa</h1>
+               <div class="albumStats">
+                  <p class="mb-2">Chill and relax with this Bossa nova selection.</p>
+                  <div class="d-flex">
+                   <p class="mb-0">
+                      <span><a>Spotify</a></span>
+                      <span>.</span>
+                      <span>5536,565 likes</span>
+                      <span>.</span>
+                      <span>60,</span>
+                      <span>Songs</span>
+                      <span id="albumTotalDur"> 3h 8min</span>
+                   </p>
+                  </div>
+               </div>
+              </div>
             </div>
           </div>
       </section>
@@ -229,31 +249,38 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Album</th>
-                    <th scope="col">Date Added</th>
+                    <th class="d-none d-md-tableCell" scope="col">Album</th>
+                    <th class="d-none d-tableCell" scope="col">Date Added</th>
                     <th scope="col">Clock</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td class="text-truncate">
+
+                      <img src="" alt="">
+                      
+                      Marsdfs sdfsdf sdfsdf sdfsdfsdfsdfsd k
+                    
+                    
+                    </td>
+                    <td class="d-none d-md-tableCell">Otto</td>
+                    <td class="d-none d-tableCell">@mdo</td>
                     <td>@mdo</td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td class="text-truncate">Jacob</td>
+                    <td class="d-none d-md-tableCell">Thornton</td>
+                    <td class="d-none d-tableCell">@fat</td>
                     <td>@fat</td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+                    <td class="text-truncate">Larry</td>
+                    <td class="d-none d-md-tableCell">the Bird</td>
+                    <td class="d-none d-tableCell">@twitter</td>
                     <td>@twitter</td>
                   </tr>
                 </tbody>

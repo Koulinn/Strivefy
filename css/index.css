@@ -7,9 +7,9 @@ body {
 }
 
 h1 {
-  font-size: 48px;
-  line-height: 48px;
-  font-weight: 900;
+  font-size: 52px;
+  line-height: 56px;
+  font-weight: 700;
 }
 
 h2 {
@@ -118,7 +118,8 @@ p {
 .footer-music-name,
 .footer-album-icons > .icon-target-area > svg,
 #track-bar span,
-.scrolling-menu > div > p {
+.scrolling-menu > div > p,
+#tracklist .table {
   color: white;
 }
 

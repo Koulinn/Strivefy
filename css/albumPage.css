@@ -1,0 +1,89 @@
+#allContentWrapper{
+    background: rgb(18,18,18);
+    background: linear-gradient(0deg, rgba(18,18,18,1) 21%, rgba(20,20,20,1) 35%, rgba(97,99,34,1) 65%, rgba(179,164,55,1) 80%, rgba(255,253,46,1) 100%);
+}
+
+#memberMenu .btn-upgrade, #topBarReturn > button{
+    box-shadow: none;
+}
+
+#albumCover .album-img > img{
+    width: 232px;
+    height: 232px;
+    object-fit: cover;
+    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+}
+
+
+h1{
+    font-size: 74px;
+    line-height: 74px;
+    font-weight: 700;
+}
+
+@media (max-width: 992px){
+    #albumCover .album-img > img{
+        width: 192px;
+        height: 192px;
+        object-fit: cover;
+        box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+    }
+    h1 {
+        font-size: 52px;
+        line-height: 56px;
+        font-weight: 700;
+      }
+
+      
+    }
+    
+@media (min-width: 992px){
+    .d-tableCell{
+        display: table-cell !important;
+
+    }
+
+}
+
+@media (min-width: 768px){
+    .d-md-tableCell{
+        display: table-cell !important;
+
+    }
+
+}
+
+.mt-myMod{
+    margin-top: 80px;
+}
+
+#albumCover .seeMore, #albumCover .albumStats >p{
+    color: white;
+}
+
+#albumCover > div > div > div.d-flex.flex-column.justify-content-between.mt-myMod.ml-4 > div > div > p > span:nth-child(1) > a{
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#albumCover > div > div > div.d-flex.flex-column.justify-content-between.mt-myMod.ml-4 > div > div > p > span:nth-child(1) > a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Table */
+
+#tracklist > div > table > thead > tr > th:nth-child(2){
+    width: 16px;
+}
+
+#tracklist > div > table > tbody > tr > th {
+    width: 16px;
+}
+
+#tracklist > div > table > tbody > tr > td.text-truncate{
+
+    max-width: 200px;
+}
