@@ -12,10 +12,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="./css/artist.css">
-  <link rel="stylesheet" href="./css/navPlayer.css">
   <link rel="stylesheet" href="./css/home.css">
-  <link rel="stylesheet" href="./css/home-rafa.css">
 
 
 
@@ -27,137 +24,124 @@
 </head>
 
 <body>
-  <div id="allContentWrapper" class="container-fluid mod-navBar-container d-flex flex-column p-0">
+  <div id="allContentWrapper" class="container-fluid d-flex p-0">
 
     <nav id="nav-sideBar" class="d-flex flex-column mod-navBar">
-      <a class="d-flex justify-content-center">
-        <div class="login-mod-logo">
+      <a class="d-flex ml-4 pb-3">
+        <div id="main-logo" class="d-flex">
           <svg viewBox="0 0 1134 340" class="spotify-logo--text">
-            <path fill="currentColor" d="M8 171c0 92 76 168 168 168s168-76 168-168S268 
-                4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 
-                162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9
-                188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17
-                27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 
-                18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16
-                23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31
-                0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1
-                0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15
-                0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62
-                60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13
-                34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2
-                1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1
-                0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11
-                4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24
-                0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1
-                0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1
-                0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1
-                0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0
-                1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 
-                19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18
-                18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 
-                18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z">
+            <path fill="currentColor"
+              d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z">
             </path>
           </svg>
         </div>
       </a>
-      <ul class="nav-menu d-flex flex-column mt-2">
-        <li class="d-flex align-items-center my-2">
-          <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
-              fill="currentColor">
-            </path>
-          </svg>
-          <a class="ml-2" href="">HOME</a>
+      <ul class="nav-menu d-flex flex-column mb-0 p-0">
+
+
+
+        <li class="d-flex align-items-center w-100">
+          <button type="button" class="d-flex align-items-center w-100 p-2">
+            <div class="d-flex align-items-center justify-content-center p-0 mx-3">
+              <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+            <span>Home</span>
+          </button>
         </li>
 
-        <li class="d-flex align-items-center my-2">
-          <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508
-              36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476
-                14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905
-                38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224
-              377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 
-              21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor"
-              fill-rule="evenodd">
-            </path>
-          </svg>
-          <a class="ml-2" href="">SEARCH</a>
+        <li class="d-flex align-items-center w-100">
+          <button type="button" class="d-flex align-items-center w-100 p-2">
+            <div class="d-flex align-items-center justify-content-center p-0 mx-3">
+              <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508
+                  36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476
+                    14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905
+                    38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224
+                  377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 
+                  21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor"
+                  fill-rule="evenodd">
+                </path>
+              </svg>
+            </div>
+            <span>Search</span>
+          </button>
         </li>
 
-        <li class="d-flex align-items-center my-2">
-          <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 
+
+        <li class="d-flex align-items-center w-100">
+          <button type="button" class="d-flex align-items-center w-100 p-2">
+            <div class="d-flex align-items-center justify-content-center p-0 mx-3">
+              <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 
             463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="currentColor">
-            </path>
-          </svg>
-          <a class="ml-2" href="">Your Library</a>
+                </path>
+              </svg>
+            </div>
+            <span>Your Library</span>
+          </button>
         </li>
 
       </ul>
 
-      <div class="sub-menu">
-        <ul class="nav-menu d-flex flex-column mb-0">
-          <li class="d-flex align-items-center my-2">
-            <div class="square quare d-flex align-items-center justify-content-center">
-              <svg role="img" height="12" width="12" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf">
-                <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
-                <path fill="none" d="M0 0h16v16H0z"></path>
-              </svg>
-
-            </div>
-
-            <a class="ml-2" href="">Create Playlist</a>
+      <div class="sub-menu mt-4">
+        <ul class="nav-menu d-flex flex-column mb-0 p-0">
+          <li class="d-flex align-items-center w-100">
+            <button type="button" class="d-flex align-items-center w-100 p-2">
+              <div class="square d-flex align-items-center justify-content-center p-0 mx-3">
+                <svg role="img" height="12" width="12" viewBox="0 0 16 16">
+                  <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
+                  <path fill="none" d="M0 0h16v16H0z"></path>
+                </svg>
+              </div>
+              <span> Create Playlist</span>
+            </button>
           </li>
 
-          <li class="d-flex align-items-center my-2">
-            <div class="square  d-flex align-items-center justify-content-center mod-BGC">
-              <svg role="img" height="12" width="12" viewBox="0 0 16 16" class="Svg-ulyrgf-0 ghlXvf">
-                <path fill="none" d="M0 0h16v16H0z"></path>
-                <path
-                  d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
-                </path>
-              </svg>
-            </div>
-
-            <a class="ml-2" href="">Liked Songs</a>
+          <li class="d-flex align-items-center w-100">
+            <button type="button" class="d-flex align-items-center w-100 p-2">
+              <div class="square d-flex align-items-center justify-content-center p-0 mx-3">
+                <svg role="img" height="12" width="12" viewBox="0 0 16 16">
+                  <path fill="none" d="M0 0h16v16H0z"></path>
+                  <path
+                    d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z">
+                  </path>
+                </svg>
+              </div>
+              <span>Liked Songs</span>
+            </button>
           </li>
-
         </ul>
 
       </div>
 
-      <div class="d-flex flex-column justify-content-between h-100">
-        <div id="scrolling-menu" class="d-flex flex-column recent-music pt-2">
-          <div class="scroll">
-            <ul>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li class="d-flex align-items-center justify-content-between">
-                Music
-                <span class="scrolling-svg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                      d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z" />
-                  </svg>
-                </span>
-              </li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music one</li>
-              <li>Music Last</li>
-            </ul>
+      <hr>
+
+      <div id="savedAlbums" class="d-flex flex-column justify-content-between h-100">
+        <div class="d-flex position-relative flex-column">
+          <div id="scrolling-menu" class="d-flex flex-column">
+            <div class="scroll">
+              <ul class="p-0">
+                <li class="d-flex align-items-center justify-content-between pl-4">
+                  Music
+                  <span class="scrolling-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path
+                        d="M10.119 16.064c2.293-.53 4.427-.994 3.394-2.946-3.147-5.941-.835-9.118 2.488-9.118 3.388 0 5.643 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.393 2.946 1.985.458 2.118 1.428 2.118 3.107l-.003.828h-1.329c0-2.089.083-2.367-1.226-2.669-1.901-.438-3.695-.852-4.351-2.304-.239-.53-.395-1.402.226-2.543 1.372-2.532 1.719-4.726.949-6.017-.902-1.517-3.617-1.509-4.512-.022-.768 1.273-.426 3.479.936 6.05.607 1.146.447 2.016.206 2.543-.66 1.445-2.472 1.863-4.39 2.305-1.252.29-1.172.588-1.172 2.657h-1.331c0-2.196-.176-3.406 2.116-3.936zm-10.117 3.936h1.329c0-1.918-.186-1.385 1.824-1.973 1.014-.295 1.91-.723 2.316-1.612.212-.463.355-1.22-.162-2.197-.952-1.798-1.219-3.374-.712-4.215.547-.909 2.27-.908 2.819.015.935 1.567-.793 3.982-1.02 4.982h1.396c.44-1 1.206-2.208 1.206-3.9 0-2.01-1.312-3.1-2.998-3.1-2.493 0-4.227 2.383-1.866 6.839.774 1.464-.826 1.812-2.545 2.209-1.49.345-1.589 1.072-1.589 2.334l.002.618z" />
+                    </svg>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
           </div>
-  
         </div>
-        <div class="download-app d-flex align-items-center py-3">
+        <div id="download-app" class="d-flex align-items-center py-2 px-4">
           <div class="icon">
-            <svg role="img" height="24" width="24" viewBox="0 0 24 24" class="Svg-ulyrgf-0 ghlXvf">
+            <svg role="img" height="24" width="24" viewBox="0 0 24 24">
               <path d="M11.5 0C5.149 0 0 5.148 0 11.5 0 17.851 5.149 23 11.5 23S23 17.851 23 
               11.5C23 5.148 17.851 0 11.5 0zm0 22C5.71 22 1 17.29 1 11.5S5.71 1 11.5 1
               22 5.71 22 11.5 17.29 22 11.5 22zm.499-6.842V5h-1v10.149l-3.418-3.975-.758.652
@@ -166,11 +150,396 @@
             </svg>
           </div>
           <div class="pl-2">
-            <span class="mod-color-white">Install App</span>
+            <span>Install App</span>
           </div>
         </div>
       </div>
     </nav>
+
+    <main class="container-fluid p-0 m-0">
+      <header id="topBar" class="row d-flex w-100 p-0 m-0">
+        <div class="col-12 p-4 m-0 d-flex justify-content-between align-items-center">
+          <div id="topBarReturn" class="d-flex justify-content-between align-items-center">
+            <button type="button">
+              <div class="previousArrow">
+                <svg role="img" focusable="false" height="22" width="22" viewBox="0 0 24 24"
+                  class="Svg-sc-1usfroi-0 kcaoHR _6fe5d5efc9b4a07d5c424071ac7cdacb-scss">
+                  <polyline points="16 4 7 12 16 20" fill="none" stroke="#181818"></polyline>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <div id="memberMenu" class="d-flex align-items-center">
+            <button class="btn-upgrade mr-3"> Upgrade</button>
+            <div class="dropdown ml-3 d-flex align-items-center">
+              <figure id="avatarIMG" class="m-0 mr-2">
+                <img aria-hidden="false" height="28" draggable="false" loading="eager"
+                  src="https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=416657282057430&amp;height=300&amp;width=300&amp;ext=1626675419&amp;hash=AeSvuPnz4PtFnG8QN7w"
+                  alt="Rafael Lima">
+              </figure>
+              <button class="btn dropdown-toggle py-1" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Rafa
+              </button>
+              <div class="dropdown-menu dropdown-menu-left m-0 p-0" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item d-flex justify-content-between" type="button">
+                  Account
+                  <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="ml-5 mr-2">
+                    <path fill-rule="evenodd"
+                      d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <button class="dropdown-item" type="button">Profile</button>
+                <button class="dropdown-item d-flex justify-content-between" type="button">
+                  Upgrade to Premium
+                  <svg role="img" height="16" width="16" viewBox="0 0 16 16" class="ml-5 mr-2">
+                    <path fill-rule="evenodd"
+                      d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <button class="dropdown-item" type="button">Log out</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section id="charts" class="row d-flex flex-column mt-3 py-0 px-4 m-0">
+        <div class="col-12 p-0 d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-column">
+            <h2 class="m-0">
+              <a>Charts</a>
+            </h2>
+          <span class="section-text-aux mt-1 mb-2">Latest music</span>
+          </div>
+
+          <span class="seeMore">SEE ALL</span>
+
+        </div>
+
+        <div class="col-12 d-flex px-0">
+          <div class="card col d-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col d-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowra d-none d-md-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-lg-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-lg-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-xl-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col d-none d-xl-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-xxl-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+      </section>
+      <section id="charts" class="row d-flex flex-column mt-3 py-0 px-4 m-0">
+        <div class="col-12 p-0 d-flex justify-content-between align-items-center">
+          <h2>
+            <a>Charts</a>
+          </h2>
+
+          <span class="seeMore">SEE ALL</span>
+
+        </div>
+
+        <div class="col-12 d-flex px-0 cardDeck">
+          <div class="card col d-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col d-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowra d-none d-md-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-lg-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-lg-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-xl-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col d-none d-xl-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-xxl-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+      </section>
+      <section id="charts" class="row d-flex flex-column mt-3 py-0 px-4 m-0">
+        <div class="col-12 p-0 d-flex justify-content-between align-items-center">
+          <h2>
+            <a>Charts</a>
+          </h2>
+
+          <span class="seeMore">SEE ALL</span>
+
+        </div>
+
+        <div class="col-12 d-flex px-0 cardDeck">
+          <div class="card col d-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col d-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowra d-none d-md-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-lg-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-lg-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-xl-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col d-none d-xl-flex flex-nowrap card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+          <div class="card col flex-nowrap d-none d-xxl-flex card-square">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w"
+              class="card-img-top" alt="...">
+            <div class="card-body card-bodymod px-0">
+              <h5 class="card-title card-title-mod">Card title</h5>
+              <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                of the card's content.</p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+      </section>
+
+    </main>
+
 
 
 
@@ -327,7 +696,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
-  <script src="./player.js"></script>
+  <script src="./js/player.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/topBarOpBG.js"></script>
 </body>
 
 </html>
