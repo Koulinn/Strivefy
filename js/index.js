@@ -22,11 +22,12 @@ function createHtmlContent(HTMLTag, innerText, ArrClassesToAdd, HtmlNodeSelector
 
 
 
+// Generate Sections
 /** 
  * @param {String} sectionIdName , should has no space
+ * @param {Array} arrWithClasses
 */
 
-// Generate Sections
 const sectionClasses = ['row', 'd-flex', 'flex-column', 'mt-3', 'py-0', 'px-4', 'm-0']
 function generateSections(sectionIdName, arrWithClasses){
   let newSection = createHtmlContent('section', '' , arrWithClasses,
@@ -37,6 +38,10 @@ function generateSections(sectionIdName, arrWithClasses){
 generateSections('newSection', sectionClasses)
 
 // Generate Divs
+/** 
+ * @param {Array} divClasses
+ * @param {String} nodeToInsertQSelector
+*/
 
 function generateDivs(divClasses, nodeToInsertQSelector){
   let newDiv = createHtmlContent('div', '', divClasses, nodeToInsertQSelector, 'beforeend')
@@ -46,12 +51,6 @@ const classesFromFirstDivSection = ['col-12', 'p-0', 'd-flex', 'justify-content-
 const sectionSelector = `#newSection`
 
 generateDivs(classesFromFirstDivSection, sectionSelector)
-
-
-// Generate Cards
-
-
-
 
 
 
