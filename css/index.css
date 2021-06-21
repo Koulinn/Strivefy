@@ -557,6 +557,10 @@ section .section-text-aux {
     color: var(--fadedWhite);
 }
 
+.trackStats:hover {
+    background-color: #888;
+}
+
 
 /* Middle Section */
 
