@@ -556,3 +556,35 @@ section .section-text-aux {
 .mod-text-colorFadedWhite {
     color: var(--fadedWhite);
 }
+
+
+/* Middle Section */
+
+#middleMenu #greenPlayBTN {
+    background-color: #1db954;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all .3s ease;
+}
+
+#middleMenu #greenPlayBTN:hover {
+    transform: scale(1.15);
+    background: rgb(63, 247, 159);
+    background: linear-gradient(0deg, rgba(63, 247, 159, 0.9360119047619048) 31%, rgba(0, 255, 106, 0.9304096638655462) 100%);
+}
+
+#middleMenu #favoriteCurrentContent,
+#middleMenu #menuCurrentContent {
+    transform: scale(1);
+    fill: white;
+    transition: all .3s ease;
+}
+
+#middleMenu #favoriteCurrentContent:hover,
+#middleMenu #menuCurrentContent:hover {
+    transform: scale(1.15);
+    fill: #1db954;
+}
