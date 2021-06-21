@@ -1,20 +1,18 @@
 /* Rafa Css */
 
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;900&display=swap");
-
-:root{
-  --fadedWhite: hsla(0, 0%, 100%, 0.85);
+:root {
+    --fadedWhite: hsla(0, 0%, 100%, 0.85);
 }
 
-
 body {
-  font-family: "Heebo", Arial, Helvetica, sans-serif;
+    font-family: "Heebo", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-size: 52px;
-  line-height: 56px;
-  font-weight: 700;
+    font-size: 52px;
+    line-height: 56px;
+    font-weight: 700;
 }
 
 h2 {
@@ -25,11 +23,9 @@ h2 {
     color: white;
 }
 
-h3 {
-}
+h3 {}
 
-h4 {
-}
+h4 {}
 
 h5 {
     font-size: 16px;
@@ -39,8 +35,7 @@ h5 {
     color: white;
 }
 
-h6 {
-}
+h6 {}
 
 p {
     font-size: 13px;
@@ -51,504 +46,513 @@ p {
 }
 
 #allContentWrapper {
-  background: rgb(18,18,18);
-  background: linear-gradient(0deg, rgba(18,18,18,1) 81%, rgba(20,20,20,1) 89%, rgba(33,33,33,1) 93%, rgba(37,37,37,1) 96%, rgba(43,43,43,1) 100%);
+    background: rgb(18, 18, 18);
+    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 81%, rgba(20, 20, 20, 1) 89%, rgba(33, 33, 33, 1) 93%, rgba(37, 37, 37, 1) 96%, rgba(43, 43, 43, 1) 100%);
+}
+
+#allContentWrapper>main>section:last-child {
+    margin-bottom: calc(10vh + 24px)!important;
 }
 
 #nav-sideBar #main-logo {
-  color: white;
-  width: 128px;
+    color: white;
+    width: 128px;
 }
 
 #nav-sideBar button,
 #download-app {
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 14px;
-  background-color: transparent;
-  color: white;
-  border: none;
-  letter-spacing: 1px;
-  outline: 0;
-  opacity: 0.7;
-  transition: opacity 0.2s linear, background-color 0.2s linear;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 14px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    outline: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s linear, background-color 0.2s linear;
 }
 
 #nav-sideBar button:hover,
 #nav-sideBar button:active,
-#scrolling-menu > div > ul > li:hover,
+#scrolling-menu>div>ul>li:hover,
 #download-app:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
-#scrolling-menu > div > ul > li {
-  opacity: 0.7;
-  transition: opacity 0.2s linear, background-color 0.2s linear;
+#scrolling-menu>div>ul>li {
+    opacity: 0.7;
+    transition: opacity 0.2s linear, background-color 0.2s linear;
 }
 
 #nav-sideBar button:active,
-#scrolling-menu > div > ul > li:active {
-  background-color: rgba(158, 158, 158, 0.308);
+#scrolling-menu>div>ul>li:active {
+    background-color: rgba(158, 158, 158, 0.308);
 }
 
-#scrolling-menu > div > ul {
-  font-size: 13px;
-  letter-spacing: 0.7px;
-  font-weight: 300;
-  line-height: 30px;
+#scrolling-menu>div>ul {
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    font-weight: 300;
+    line-height: 30px;
 }
 
 #nav-sideBar hr {
-  border-color: #363636;
-  width: 80%;
+    border-color: #363636;
+    width: 80%;
 }
 
 #nav-sideBar {
-  height: 90vh;
-  padding-top: 24px;
-  max-width: 232px;
-  min-width: 232px;
-  background-color: #000000;
-  position: sticky;
+    height: 90vh;
+    padding-top: 24px;
+    max-width: 232px;
+    min-width: 232px;
+    background-color: #000000;
+    position: sticky;
     top: 0px;
 }
 
+
 /* color and fill start */
 
-.nav-menu > li,
-.nav-menu > li > a,
+.nav-menu>li,
+.nav-menu>li>a,
 .mod-color-white,
 .footer-music-name,
 .mod-color-white,
 .footer-music-name,
-.footer-album-icons > .icon-target-area > svg,
+.footer-album-icons>.icon-target-area>svg,
 #track-bar span,
-.scrolling-menu > div > p,
+.scrolling-menu>div>p,
 #tracklist .table {
-  color: white;
+    color: white;
 }
 
-.square.mod-BGC > svg,
+.square.mod-BGC>svg,
 #download-app svg,
-.scrolling-svg > svg,
-.footer-album-icons > div > svg,
-#player-controls > .icon-target-area > svg,
-#pairingDevice > svg,
+.scrolling-svg>svg,
+.footer-album-icons>div>svg,
+#player-controls>.icon-target-area>svg,
+#pairingDevice>svg,
 #volumeMute-icon svg,
-#topBar .dropdown-menu .dropdown-item > svg {
-  fill: white;
+#topBar .dropdown-menu .dropdown-item>svg {
+    fill: white;
 }
+
 
 /* color and fill end */
 
 .square {
-  width: 24px;
-  height: 24px;
-  background-color: white;
+    width: 24px;
+    height: 24px;
+    background-color: white;
 }
 
 .square.mod-BGC {
-  background: linear-gradient(135deg, #450af5, #c4efd9);
-  background-image: linear-gradient(
-    135deg,
-    rgb(69, 10, 245),
-    rgb(196, 239, 217)
-  );
+    background: linear-gradient(135deg, #450af5, #c4efd9);
+    background-image: linear-gradient( 135deg, rgb(69, 10, 245), rgb(196, 239, 217));
 }
 
 #scrolling-menu {
-  width: 240px;
-  max-height: 91%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  max-height: -webkit-fill-available;
+    width: 240px;
+    max-height: 91%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    max-height: -webkit-fill-available;
 }
-#savedAlbums > div:first-child {
-  height: -webkit-fill-available;
+
+#savedAlbums>div:first-child {
+    height: -webkit-fill-available;
 }
 
 .scroll {
-  overflow: auto;
-  scroll-behavior: smooth;
-  white-space: nowrap;
-  width: 96%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 96%;
 }
 
-.scroll > ul > li {
-  color: white;
-  list-style: none;
-  padding-right: 32px;
+.scroll>ul>li {
+    color: white;
+    list-style: none;
+    padding-right: 32px;
 }
 
 .footer-music-name {
-  font-size: 14px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
+
 /* Scroll bar */
+
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+    background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }
 
+
 /* Footer Player */
+
 #footer {
-  position: fixed;
-  bottom: 0px;
-  height: 10vh;
-  border-top: 1px solid #282828;
-  background-color: #181818;
-  width: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+    position: fixed;
+    bottom: 0px;
+    height: 10vh;
+    border-top: 1px solid #282828;
+    background-color: #181818;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
 }
 
 .mod-font-size-small {
-  font-size: 12px;
-  letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 .footer-music-stats {
-  width: 30%;
+    width: 30%;
 }
 
 .footer-album-text {
-  min-width: 56px;
+    min-width: 56px;
 }
 
 .footer-album-cover {
-  min-width: 56px;
+    min-width: 56px;
 }
 
 .icon-target-area {
-  height: 32px;
-  width: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 /* Music Player */
 
 #track-bar {
-  max-width: 722px;
-  width: 40%;
+    max-width: 722px;
+    width: 40%;
 }
 
 #footer-player {
-  width: 40%;
+    width: 40%;
 }
 
 #player-play-music {
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 100%;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
 }
 
 #progress-bar-wrapper {
-  overflow: hidden;
-  width: 100%;
-  border-radius: 14%;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 14%;
 }
 
 #volume-bar-wrapper {
-  overflow: hidden;
-  border-radius: 14%;
-  position: relative;
+    overflow: hidden;
+    border-radius: 14%;
+    position: relative;
 }
 
 .bar-outer-wrapper {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 #volume-bar-outer-wrapper {
-  position: relative;
+    position: relative;
 }
 
 .progress-bar-indicator {
-  position: absolute;
-  height: 8px;
-  width: 8px;
-  border-radius: 40px;
-  background-color: rgb(151, 160, 150);
-  z-index: 100;
-  top: -1.5px;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 40px;
+    background-color: rgb(151, 160, 150);
+    z-index: 100;
+    top: -1.5px;
 }
 
 #progress-bar-wrapper::after {
-  content: "";
-  position: absolute;
-  height: 6px;
-  width: 6px;
-  border-radius: 100%;
-  background-color: rgb(168, 226, 160);
-  z-index: 100;
-  top: -1px;
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    background-color: rgb(168, 226, 160);
+    z-index: 100;
+    top: -1px;
 }
 
 #progress-bar {
-  height: 4px;
-  border: 2px;
-  background-color: #535353;
-  width: 100%;
+    height: 4px;
+    border: 2px;
+    background-color: #535353;
+    width: 100%;
 }
 
 #volume-progress-bar {
-  height: 4px;
-  border: 2px;
-  background-color: #535353;
-  width: 96px;
+    height: 4px;
+    border: 2px;
+    background-color: #535353;
+    width: 96px;
 }
 
-#pairingDevice > svg {
-  height: 16px;
+#pairingDevice>svg {
+    height: 16px;
 }
 
 #footer-side-controls {
-  width: 30%;
+    width: 30%;
 }
 
 #footer-side-controls-wrapper {
-  width: 70%;
+    width: 70%;
 }
 
+
 /* Volume controls */
+
 #increase-vol-BTN {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  visibility: hidden;
-  top: -10px;
-  right: 0px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    visibility: hidden;
+    top: -10px;
+    right: 0px;
 }
+
 #decrease-vol-BTN {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  visibility: hidden;
-  top: -10px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    visibility: hidden;
+    top: -10px;
 }
+
 
 /* Top bar */
 
 #topBar {
-  background-color: rgb(18, 18, 18, 00);
-  z-index: 9999;
-  position: sticky;
-  top: 0px;
-  transition: background-color .4s ease;
+    background-color: rgb(18, 18, 18, 00);
+    z-index: 9999;
+    position: sticky;
+    top: 0px;
+    transition: background-color .4s ease;
 }
 
-.gradientBG{
-  background-color: rgb(18, 18, 18, 100)!important ;
+.gradientBG {
+    background-color: rgb(18, 18, 18, 100)!important;
 }
 
-#topBar > div{
-  position: sticky;
-  top: 0px;
+#topBar>div {
+    position: sticky;
+    top: 0px;
 }
 
-#topBarReturn > button{
-  background: #181818;
-box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4), -9px -9px 16px rgba(73, 73, 73, 0.6);
-border-radius: 20px;
-  /* border-radius: 50%; */
-  padding: 0px;
-  width: 32px;
-  height: 32px;
-  transform: scale(1);
-  transition: all linear .3s;
-
+#topBarReturn>button {
+    background: #181818;
+    box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.4), -9px -9px 16px rgba(73, 73, 73, 0.6);
+    border-radius: 20px;
+    /* border-radius: 50%; */
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+    transform: scale(1);
+    transition: all linear .3s;
 }
 
-#topBarReturn > button > div > svg > polyline{
-  stroke: var(--fadedWhite);
+#topBarReturn>button>div>svg>polyline {
+    stroke: var(--fadedWhite);
 }
 
-#topBarReturn > button:hover {
-  stroke: white;
-  transform: scale(1.2);
-
+#topBarReturn>button:hover {
+    stroke: white;
+    transform: scale(1.2);
 }
+
 #topBar .dropdown {
-  background-color: black;
-  color: white;
-  padding-left: 4px;
-  border-radius: 24px;
-  border: none;
+    background-color: black;
+    color: white;
+    padding-left: 4px;
+    border-radius: 24px;
+    border: none;
 }
 
-#topBar .dropdown > button {
-  color: white;
-  white-space: nowrap;
-  line-height: 28px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
+#topBar .dropdown>button {
+    color: white;
+    white-space: nowrap;
+    line-height: 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 #topBar .dropdown-menu {
-  transform: translate3d(-104px, 38px, 0px) !important;
-  background-color: #282828;
-  box-shadow: 0 16px 24px rgb(0 0 0 / 30%), 0 6px 8px rgb(0 0 0 / 20%);
-  max-width: 350px;
-  min-width: 160px;
+    transform: translate3d(-104px, 38px, 0px) !important;
+    background-color: #282828;
+    box-shadow: 0 16px 24px rgb(0 0 0 / 30%), 0 6px 8px rgb(0 0 0 / 20%);
+    max-width: 350px;
+    min-width: 160px;
 }
 
-.btn.focus, .btn:focus{
-  outline: none;
-  box-shadow: none!important;
+.btn.focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none!important;
 }
 
 #topBar .dropdown-menu .dropdown-item {
-  color: var(--fadedWhite);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  padding: 16px 8px 16px 16px;
+    color: var(--fadedWhite);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 16px 8px 16px 16px;
 }
 
 #topBar .dropdown-menu .dropdown-item:hover {
-  background-color: hsla(0, 0%, 100%, 0.1);
-  color: #fff;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    color: #fff;
 }
 
 #topBar #avatarIMG {
-  border-radius: 50%;
-  overflow: hidden;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 #memberMenu .btn-upgrade {
-  background: #181818;
+    background: #181818;
     box-shadow: 9px 9px 16px rgb(0 0 0 / 40%), -9px -9px 16px rgb(73 73 73 / 60%);
     border-radius: 20px;
-  color: var(--fadedWhite);
- 
-  border-radius: 24px;
-  white-space: nowrap;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: 18px;
-  padding: 8px 34px;
-  text-align: center;
-  text-transform: uppercase;
-  transform: scale(1);
-  transition: all 700ms cubic-bezier(.3,0,0,1);
+    color: var(--fadedWhite);
+    border-radius: 24px;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 18px;
+    padding: 8px 34px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: scale(1);
+    transition: all 700ms cubic-bezier(.3, 0, 0, 1);
 }
 
 #memberMenu .btn-upgrade:hover {
-  color: white;
-  border-color: white;
-  transform: scale(1.05);
+    color: white;
+    border-color: white;
+    transform: scale(1.05);
 }
 
-#memberMenu .btn-upgrade:active{
-  background: radial-gradient(38.2% 50% at 50% 50%, #2E3134 0%, #292B2E 100%);
-border: 1px solid #272829;
-box-shadow: inset 2px 2px 4px
+#memberMenu .btn-upgrade:active {
+    background: radial-gradient(38.2% 50% at 50% 50%, #2E3134 0%, #292B2E 100%);
+    border: 1px solid #272829;
+    box-shadow: inset 2px 2px 4px
 }
 
-#topBarReturn > div > svg > polyline{
-  stroke: white;
+#topBarReturn>div>svg>polyline {
+    stroke: white;
 }
 
 
 /* Cards */
 
-.horizontalScroll{
-  overflow: scroll;
-  scroll-behavior: smooth;
-  flex-wrap: nowrap;
-
+.horizontalScroll {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
 }
 
-.card-square{
-  padding: 16px;
-  background-color: transparent;
-  transition: background-color .4s ease;
+.card-square {
+    padding: 16px;
+    background-color: transparent;
+    transition: background-color .4s ease;
 }
 
-.card-square:hover{
-  background-color: #282828;
-  border-radius: 8px;
+.card-square:hover {
+    background-color: #282828;
+    border-radius: 8px;
 }
 
-.card-square > img{
-  object-fit: cover;
-  height: 144px;
-  border-radius: 4px;
+.card-square>img {
+    object-fit: cover;
+    height: 144px;
+    border-radius: 4px;
 }
 
-.card-square > div > p, .card-square > div > h5{
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+.card-square>div>p,
+.card-square>div>h5 {
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
-.card-square > div > h5{
-  -webkit-line-clamp: 1;
+.card-square>div>h5 {
+    -webkit-line-clamp: 1;
 }
 
-.card-bodymod{
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.card-bodymod {
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.seeMore{
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .5px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #b3b3b3;
-  transition: all 300ms linear;
+.seeMore {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    transition: all 300ms linear;
 }
 
-.seeMore:hover{
-  color: white;
-
+.seeMore:hover {
+    color: white;
 }
 
-.cardDeck{
-  background-color: #181818;
+.cardDeck {
+    background-color: #181818;
 }
 
-section h2:hover{
-  text-decoration: underline;
+section h2:hover {
+    text-decoration: underline;
 }
 
-section .section-text-aux{
-  color: var(--fadedWhite);
-  font-size: 12px;
-  letter-spacing: 1px;
+section .section-text-aux {
+    color: var(--fadedWhite);
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
-@media (min-width: 1400px){
-  .d-xxl-flex{
-    display: flex!important;
-
-  }
+@media (min-width: 1400px) {
+    .d-xxl-flex {
+        display: flex!important;
+    }
 }
 
-.mod-text-colorFadedWhite{
-  color: var(--fadedWhite);
+.mod-text-colorFadedWhite {
+    color: var(--fadedWhite);
 }
