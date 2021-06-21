@@ -18,11 +18,6 @@ let pauseIcon = document.getElementById('pause-icon')
 
 
 // To update time
-// let initialTime = document.querySelector('.timeInitial > span').innerText
-// let remainingTime = document.querySelector('.timeRemaining > span').innerText
-
-
-
 
 const playerCommands = {
   nextMusic: function nextMusic() {
@@ -50,7 +45,6 @@ const playerCommands = {
       musicPaths[i] = musicPaths[j];
       musicPaths[j] = aux;
     }
-    console.log(musicPaths)
   },
 
   play: function play() {
@@ -189,9 +183,10 @@ let progressBarClickedPointFoward
 progressBar.addEventListener("click", function (event) {
   // pick total width (responsive)
   progressBarClickedPointFoward = event.offsetX;
-
+  console.log(progressBarClickedPointFoward, '<<<<<----- event.offsetX')
   // Get container dimensions
   let progressBarDimensions = progressBar.getBoundingClientRect();
+  console.log(progressBarDimensions, '<---------------- getBoundingClintrect')
   let progressBarTotalWidth = parseInt(progressBarDimensions.width.toFixed(0));
   let musicPointSelected = parseFloat(
     (progressBarClickedPointFoward / progressBarTotalWidth).toFixed(2)
