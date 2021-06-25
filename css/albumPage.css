@@ -1,0 +1,137 @@
+#allContentWrapper {
+    background: rgb(24, 24, 24);
+    background: linear-gradient(0deg, rgba(24, 24, 24, 1) 60%, rgba(18, 18, 18, 0.9) 78%, rgba(255, 252, 0, 0.8) 93%, rgba(255, 252, 0, 0.6) 100%);
+}
+
+#memberMenu .btn-upgrade,
+#topBarReturn>button {
+    box-shadow: none;
+}
+
+#albumCover .album-img>img {
+    width: 232px;
+    height: 232px;
+    object-fit: cover;
+    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+}
+
+h1 {
+    font-size: 74px;
+    line-height: 74px;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    #albumCover .album-img>img {
+        width: 192px;
+        height: 192px;
+        object-fit: cover;
+        box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+    }
+    h1 {
+        font-size: 52px;
+        line-height: 56px;
+        font-weight: 700;
+    }
+}
+
+@media(max-width: 768px) {
+    .tableMusicTitle {
+        max-width: 144px;
+    }
+}
+
+@media (min-width: 992px) {
+    .d-tableCell {
+        display: table-cell !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .d-md-tableCell {
+        display: table-cell !important;
+    }
+}
+
+.mt-myMod {
+    margin-top: 80px;
+}
+
+#albumCover .seeMore,
+#albumCover .albumStats>p {
+    color: white;
+}
+
+#albumCover span>a {
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#albumCover p>span:nth-child(1)>a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Table */
+
+#trackTable #tableHeader {
+    color: var(--fadedWhite)
+}
+
+#trackTable {
+    color: white;
+    background: rgb(24, 24, 24);
+    background: linear-gradient( 0deg, rgba(24, 24, 24, 1) 70%, rgba(18, 18, 18, 0.9) 80%, rgba(24, 24, 24, 0.8) 90%, rgba(43, 43, 43, 0.6) 100%);
+}
+
+#trackTable img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+#trackTable #tableHeader {
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    color: #b3b3b3;
+}
+
+#trackTable>div>table>thead>tr>th:nth-child(2) {
+    width: 16px;
+}
+
+#trackTable>div>table>tbody>tr>th {
+    width: 16px;
+}
+
+#trackTable>div>table>tbody>tr>td {}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+#trackTable .trackNumber {
+    width: 32px;
+    height: 32px;
+}
+
+#trackTable .trackName {
+    overflow: hidden;
+}
+
+#trackTable .tableMusicTitle {
+    width: 100%;
+    overflow: hidden;
+}
+
+#trackTable .trackAlbum {}
+
+#trackTable .trackDate {}
+
+#trackTable .trackDuration {
+    max-width: 80px;
+}
+
+.tableMusicTitle>p {}
