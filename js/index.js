@@ -22,36 +22,72 @@ function createHtmlContent(HTMLTag, innerText, ArrClassesToAdd, HtmlNodeSelector
 
 
 
+
+
 // Generate Sections
 /** 
  * @param {String} sectionIdName , should has no space
- * @param {Array} arrWithClasses
  */
 
-const sectionClasses = ['row', 'd-flex', 'flex-column', 'mt-3', 'py-0', 'px-4', 'm-0']
-
-function generateSections(sectionIdName, arrWithClasses) {
-    let newSection = createHtmlContent('section', '', arrWithClasses,
+let test
+function generateSections(sectionIdName) {
+    const sectionClasses = ['row', 'd-flex', 'flex-column', 'mt-3', 'py-0', 'px-4', 'm-0']
+    let newSection = createHtmlContent('section', '', sectionClasses,
         'main', 'beforeend')
     newSection.id = sectionIdName
+    generateSectionTitle(sectionIdName)
 }
 
-generateSections('newSection', sectionClasses)
+generateSections('Best_Music')
 
-// Generate Divs
-/** 
- * @param {Array} divClasses
- * @param {String} nodeToInsertQSelector
- */
+function generateSectionTitle(sectionTitle){
+    let sectionContainer = document.querySelector(`#${sectionTitle}`)
+    let sectionTitleRemoved_ = sectionTitle.replace('_', ' ')
+  
 
-function generateDivs(divClasses, nodeToInsertQSelector) {
-    let newDiv = createHtmlContent('div', '', divClasses, nodeToInsertQSelector, 'beforeend')
+
+    sectionContainer.insertAdjacentHTML('afterbegin', `
+         <div class="col-12 p-0 d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column">
+            <h2 class="m-0">
+              <a>${sectionTitleRemoved_}</a>
+            </h2>
+            <span class="section-text-aux mt-1 mb-2">Latest music</span>
+             </div>
+
+          <span class="seeMore">SEE ALL</span>
+        </div>
+        <div class="col-12 d-flex px-0 card-decker"></div>
+        `)
 }
 
-const classesFromFirstDivSection = ['col-12', 'p-0', 'd-flex', 'justify-content-between', 'align-items-center']
-const sectionSelector = `#newSection`
+function generateCards(sectionToInsert){
+    let sectionContainer = document.querySelector(`#${sectionToInsert} .card-decker`)
+    sectionContainer.insertAdjacentHTML('afterbegin',`
+            <div class="card col d-flex flex-nowrap card-square">
+                <img src="https://images.squarespace-cdn.com/content/v1/57a5229820099e8bfa2664b8/1582922019177-R5SJ6SKIQANSSBC989W2/ke17ZwdGBToddI8pDm48kJe0qEoc2cIEoNCZEG6czGwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcNi17y6wQb1iplGo-NkoX1FIVeq1dKD15mhhBTseqgkUqQgLJ-z95FSy_0lgEAXPe/bossa-nova.JPG?format=500w" class="card-img-top" alt="...">
+                <div class="card-body card-bodymod px-0">
+                <h5 class="card-title card-title-mod">Card title</h5>
+                <p class="card-text card-text-mod">Some quick example text to build on the card title and make up the bulk
+                    of the card's content.</p>
+                </div>
+            </div>
+    
+    `)
 
-generateDivs(classesFromFirstDivSection, sectionSelector)
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
