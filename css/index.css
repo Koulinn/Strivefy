@@ -572,6 +572,7 @@ section .section-text-aux {
     transition: all;
     transition-timing-function: ease;
     transition-duration: .5s;
+    cursor: pointer;
 }
 
 .cardPlayBtn{
