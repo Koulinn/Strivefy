@@ -1,8 +1,8 @@
 let musicPaths = [
-  "./tracks/Cirque du Soleil - Vai Vedrai.mp3",
-  "./tracks/Marisa Monte - Waters Of March.mp3",
-  "./tracks/Nara Leão - O Barquinho.mp3",
-  "./tracks/Vasco Rossi - La Verità.mp3",
+  // "./tracks/Cirque du Soleil - Vai Vedrai.mp3",
+  // "./tracks/Marisa Monte - Waters Of March.mp3",
+  // "./tracks/Nara Leão - O Barquinho.mp3",
+  // "./tracks/Vasco Rossi - La Verità.mp3",
 ];
 const player = document.getElementsByTagName("audio")[0];
 
@@ -173,11 +173,6 @@ muteBTN.addEventListener("click", function (event) {
   playerCommands.mute();
 });
 
-
-
-
-
-
 let progressBarClickedPointFoward
 // Progress bar (Forward time)
 progressBar.addEventListener("click", function (event) {
@@ -229,3 +224,52 @@ progressBarIndicator.addEventListener("click", function (event) {
   playerCommands.changeIconToPauseIcon()
   player.play()
 });
+
+
+// Fetch Music from API
+async function getTrackFromAPI(e){
+  let albumId = e.target.parentElement.getAttribute('value')
+  let currentAlbum = await getAlbumFromAPI(albumId)
+
+    // Set track to the player
+  let currentTrack = currentAlbum.tracks.data[0].preview
+  musicPaths.push(currentTrack)
+  playerCommands.nextMusic()
+
+  // Change footer Current Music info
+  let currentMusicTitle = currentAlbum.tracks.data[0].title
+  let albumCover = currentAlbum.cover_small
+  let currentArtist = currentAlbum.tracks.data[0].artist.name
+
+
+  changeBandInfo(albumCover, currentMusicTitle, currentArtist)
+}
+
+
+// Request data from API
+const getAlbumFromAPI = async (query) => {
+  try {
+    let response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + query)
+      let dataRequested = await response.json()
+      return dataRequested
+    } catch (e) {
+      return e
+    }
+  }
+  
+// Change player Author Data
+  
+// let test
+function changeBandInfo(imgSrc, footerMusicTitle, footerArtistName){
+  let albumCover = document.querySelector('.footer-album-cover > img')
+  albumCover.src = imgSrc
+
+  let footerMusicName = document.querySelector('.footer-music-name > p')
+  footerMusicName.innerText = footerMusicTitle
+  
+  let footerArtistNameSpan = document.querySelector('.footer-music-name > span')
+  footerArtistNameSpan.innerHTML = ''
+  footerArtistNameSpan.insertAdjacentHTML('afterbegin', `
+    <a>${footerArtistName}</a>
+  `)
+}

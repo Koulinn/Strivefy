@@ -561,6 +561,39 @@ section .section-text-aux {
     background-color: #888;
 }
 
+.cardPlayBtnBg{
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #1db954;
+    border-radius: 50%;
+    bottom: 16px;
+    right: 8px;
+    transition: all;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
+
+.cardPlayBtn{
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-left:12px solid white; 
+    transform: translateX(1px);
+}
+
+.card-square:hover .cardPlayBtnBg{
+    opacity: 1;
+    right: 8px;
+    bottom: 8px;
+    z-index: 100;
+}
+
+
+
+
+
 
 /* Middle Section */
 

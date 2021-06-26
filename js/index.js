@@ -91,24 +91,29 @@ function generateSectionTitle(sectionTitle) {
 
           <span class="seeMore">SEE ALL</span>
         </div>
-        <div class="col-12 d-flex px-0 cardDeck"></div>
+        <div class="row d-flex px-0 cardDeck"></div>
         `)
 }
 
 function generateCards(sectionToInsert, sliceInitial, sliceEnd) {
     let sectionContainer = document.querySelector(`#${sectionToInsert} .cardDeck`)
     let data = dataFromAPI.data.slice(sliceInitial, sliceEnd)
-    test = data
 
-    data.forEach((data, index) => {
+    data.forEach((data) => {
         sectionContainer.insertAdjacentHTML('afterbegin', `
             <div class="d-flex card col flex-nowrap card-square">
-               <a href="albumPage.html?album_Id=${data.album.id}">
-                    <img src="${data.album.cover_medium}" class="card-img-top" alt="...">
-                </a>
+               <div class="position-relative">
+                    <div class="position-absolute d-flex justify-content-center align-items-center cardPlayBtnBg" value="${data.album.id}" onclick="getTrackFromAPI(event)">
+                        <div class="cardPlayBtn">
+                        </div>
+                    </div>
+                    <a href="albumPage.html?album_Id=${data.album.id}">
+                        <img src="${data.album.cover_medium}" class="card-img-top" alt="...">
+                    </a>
+               </div>
                 <div class="card-body card-bodymod px-0">
                 <a href="albumPage.html?album_Id=${data.album.id}">
-                    <h5 class="card-title card-title-mod">${data.album.title}</h5>
+                    <h5 class="card-title text-truncate card-title-mod">${data.album.title}</h5>
                 </a>
                 <a href="artistPage.html?album_Id=${data.album.id}">
                      <p class="card-text card-text-mod">${data.artist.name}</p>
