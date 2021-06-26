@@ -100,11 +100,16 @@ function generateCards(sectionToInsert, sliceInitial, sliceEnd) {
     let data = dataFromAPI.data.slice(sliceInitial, sliceEnd)
     test = data
 
-    data.forEach((data, index) => {
+    data.forEach((data) => {
         sectionContainer.insertAdjacentHTML('afterbegin', `
             <div class="d-flex card col flex-nowrap card-square">
-               <a href="albumPage.html?album_Id=${data.album.id}">
+               <a class="position-relative" href="albumPage.html?album_Id=${data.album.id}">
                     <img src="${data.album.cover_medium}" class="card-img-top" alt="...">
+                    <div class="position-absolute d-flex justify-content-center align-items-center cardPlayBtnBg">
+                        <div class="cardPlayBtn">
+                    
+                         </div>
+                    </div>
                 </a>
                 <div class="card-body card-bodymod px-0">
                 <a href="albumPage.html?album_Id=${data.album.id}">
