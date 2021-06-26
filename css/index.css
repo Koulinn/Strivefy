@@ -567,9 +567,8 @@ section .section-text-aux {
     width: 40px;
     background-color: #1db954;
     border-radius: 50%;
-    bottom: 8px;
+    bottom: 16px;
     right: 8px;
-    transform: translateY(-8px);
     transition: all;
     transition-timing-function: ease;
     transition-duration: .5s;
@@ -586,7 +585,9 @@ section .section-text-aux {
 
 .card-square:hover .cardPlayBtnBg{
     opacity: 1;
-    bottom: 0px;
+    right: 8px;
+    bottom: 8px;
+    z-index: 100;
 }
 
 
