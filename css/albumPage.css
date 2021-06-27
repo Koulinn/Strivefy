@@ -141,3 +141,14 @@ h1 {
 }
 
 .tableMusicTitle>p {}
+
+
+.modTranslate{
+    transform: translateY(4px);
+
+}
+
+#tableHeader{
+    transition: background-color .4s ease;
+
+}
