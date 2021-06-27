@@ -493,6 +493,7 @@ a{
     padding: 16px;
     background-color: transparent;
     transition: background-color .4s ease;
+    max-width: 216px;
 }
 
 .card-square:hover {
