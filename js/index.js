@@ -21,7 +21,9 @@ function createHtmlContent(HTMLTag, innerText, ArrClassesToAdd, HtmlNodeSelector
 }
 
 
-let dataFromAPI
+let dataFromSearch = {}
+let dataFromAlbum = {}
+let aux = 0
 
 
 const getDataFromAPI = async (query, endpoint = 'search?q=') => {
@@ -34,13 +36,21 @@ const getDataFromAPI = async (query, endpoint = 'search?q=') => {
     }
 }
 
-const sendRequestToApi = async (userSearchValue) => {
-    dataFromAPI = await getDataFromAPI(userSearchValue)
-    loadPageHTML()
+// storeData needs to be an empty object
+const sendRequestToApi = async (storeData, userSearchValue, requestedEndpoint) => {
+    let tempData
+    tempData = await getDataFromAPI(userSearchValue, requestedEndpoint)
+    Object.assign(storeData, tempData)
+}
+
+async function loadCards(storeData, userSearchValue, requestedEndpoint) {
+    await sendRequestToApi(storeData, userSearchValue)
+    loadCardSections()
+
 }
 
 
-function loadPageHTML() {
+function loadCardSections() {
     generateSections('Best_Music', 0, 7)
     generateSections('Chilling', 7, 14)
     generateSections('Relax', 14, 21)
@@ -48,8 +58,11 @@ function loadPageHTML() {
 }
 
 window.onload = () => {
-    sendRequestToApi('sun')
+    loadCards(dataFromSearch,'sun')
     let albumId = new URLSearchParams(window.location.search).get("album_Id")
+    let albumEndpoint = 'album/'
+    if(albumId != undefined)
+    sendRequestToApi(dataFromAlbum, albumId, albumEndpoint)
     
 }
 
@@ -99,7 +112,8 @@ function generateSectionTitle(sectionTitle) {
 
 function generateCards(sectionToInsert, sliceInitial, sliceEnd) {
     let sectionContainer = document.querySelector(`#${sectionToInsert} .cardDeck`)
-    let data = dataFromAPI.data.slice(sliceInitial, sliceEnd)
+    console.log(dataFromSearch)
+    let data = dataFromSearch.data.slice(sliceInitial, sliceEnd)
 
     data.forEach((data) => {
         sectionContainer.insertAdjacentHTML('afterbegin', `
