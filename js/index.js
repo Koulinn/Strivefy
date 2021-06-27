@@ -195,9 +195,11 @@ function setAlbumInfoHTML(albumImgSrc, albumTitle, artistName, fans, nbTracks, d
                     <div class="d-inline-block album-img">
                         <img src="${albumImgSrc}" alt="">
                                 </div>
-                        <div class="d-flex flex-column justify-content-between mt-myMod ml-4">
-                            <span class="seeMore"> ${genre} </span>
-                            <h1 class="m-0">${albumTitle}</h1>
+                        <div class="d-flex flex-column justify-content-end ml-4">
+                           <div class="pb-3">
+                                <span class="seeMore"> ${genre} </span>
+                                <h1 class="m-0">${albumTitle}</h1>
+                           </div>
                             <div class="albumStats">
                                 <p class="mb-2">${artistName}</p>
                                 <div class="d-flex">
@@ -238,5 +240,49 @@ function loadAlbumInfo(){
 async function loadAlbumDetails(albumId, albumEndpoint){
     await sendRequestToApi(dataFromAlbum, albumId, albumEndpoint)
     loadAlbumInfo()
+    loadTracksDetails()
+
+}
+
+function setTracksHTML(trackNumber, trackAlbumSrc, trackName, trackAuthor, trackAlbumName, trackRank, trackDur){
+    return`
+        <div class="row justify-content-between p-0 py-3 px-4 m-0 trackStats">
+            <div class="trackNumber d-flex justify-content-center align-items-center">
+                <span class=" d-flex align-items-center justify-content-center modTranslate">${trackNumber}</span>
+            </div>
+            <div class="col-md-5 col-8 trackName d-flex align-items-center">
+                <img src="${trackAlbumSrc}" alt="">
+                <div class="d-flex flex-column pl-3 tableMusicTitle ">
+                    <p class="text-truncate m-0 p-0">${trackName}</p>
+                    <span class="mod-font-size-small mod-text-colorFadedWhite m-0 p-0">${trackAuthor}</span>
+                </div>
+            </div>
+            <div class="col trackAlbum d-none d-md-flex justify-content-center align-items-center mod-font-size-small mod-text-colorFadedWhite">
+                ${trackAlbumName}</div>
+            <div class="col trackDateAdded d-none d-lg-flex justify-content-center align-items-center mod-font-size-small mod-text-colorFadedWhite">
+                ${trackRank}</div>
+            <div class="col p-0 trackDuration d-flex justify-content-center align-items-center  mod-font-size-small mod-text-colorFadedWhite">
+                <span>${trackDur}</span>
+            </div>
+        </div> 
+    `
+    
+}
+
+function loadTracksDetails(){
+    let tableHeader = document.getElementById('tableHeader')
+
+    
+    let trackAlbumSrc = dataFromAlbum.cover_medium
+    let albumName = dataFromAlbum.title
+    let albumTracks = dataFromAlbum.tracks.data
+
+    let nbTracks = dataFromAlbum.tracks.data.length
+
+    albumTracks.forEach((track, i) =>{
+        tableHeader.insertAdjacentHTML('afterend',`${setTracksHTML(nbTracks - i, trackAlbumSrc,
+            track.title, track.artist.name, albumName, track.rank, track.duration
+            )}` )
+    })
 
 }
