@@ -21,12 +21,14 @@ function createHtmlContent(HTMLTag, innerText, ArrClassesToAdd, HtmlNodeSelector
 }
 
 
-let dataFromAPI
+let dataFromSearch = {}
+let dataFromAlbum = {}
+let aux = 0
 
 
-const getDataFromAPI = async (query) => {
+const getDataFromAPI = async (query, endpoint = 'search?q=') => {
     try {
-        let response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + query)
+        let response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/${endpoint}` + query)
         let dataRequested = await response.json()
         return dataRequested
     } catch (e) {
@@ -34,13 +36,21 @@ const getDataFromAPI = async (query) => {
     }
 }
 
-const sendRequestToApi = async (userSearchValue) => {
-    dataFromAPI = await getDataFromAPI(userSearchValue)
-    loadPageHTML()
+// storeData needs to be an empty object
+const sendRequestToApi = async (storeData, userSearchValue, requestedEndpoint) => {
+    let tempData
+    tempData = await getDataFromAPI(userSearchValue, requestedEndpoint)
+    Object.assign(storeData, tempData)
+}
+
+async function loadCards(storeData, userSearchValue, requestedEndpoint) {
+    await sendRequestToApi(storeData, userSearchValue)
+    loadCardSections()
+
 }
 
 
-function loadPageHTML() {
+function loadCardSections() {
     generateSections('Best_Music', 0, 7)
     generateSections('Chilling', 7, 14)
     generateSections('Relax', 14, 21)
@@ -48,18 +58,14 @@ function loadPageHTML() {
 }
 
 window.onload = () => {
-    sendRequestToApi('sun')
+    loadCards(dataFromSearch,'sun')
     let albumId = new URLSearchParams(window.location.search).get("album_Id")
-    console.log(albumId)
+    console
+    let albumEndpoint = 'album/'
+    if(albumId != undefined)
+    loadAlbumDetails(albumId, albumEndpoint)
+    
 }
-
-
-
-
-
-
-
-
 
 // Generate Sections
 /** 
@@ -99,7 +105,7 @@ function generateSectionTitle(sectionTitle) {
 
 function generateCards(sectionToInsert, sliceInitial, sliceEnd) {
     let sectionContainer = document.querySelector(`#${sectionToInsert} .cardDeck`)
-    let data = dataFromAPI.data.slice(sliceInitial, sliceEnd)
+    let data = dataFromSearch.data.slice(sliceInitial, sliceEnd)
 
     data.forEach((data) => {
         sectionContainer.insertAdjacentHTML('afterbegin', `
@@ -174,3 +180,109 @@ btnCreatePlaylist.addEventListener("click", function () {
         "beforeend"
     );
 });
+
+
+
+
+
+// Album page 
+
+function setAlbumInfoHTML(albumImgSrc, albumTitle, artistName, fans, nbTracks, duration, genre){
+    return `
+        <section id="albumCover" class="row d-flex flex-column mt-3 py-0 px-4 m-0">
+            <div class=" col-12 jumbotron jumbotron-fluid bg-transparent p-0">
+                <div class="container d-flex p-0 m-0">
+                    <div class="d-inline-block album-img">
+                        <img src="${albumImgSrc}" alt="">
+                                </div>
+                        <div class="d-flex flex-column justify-content-end ml-4">
+                           <div class="pb-3">
+                                <span class="seeMore"> ${genre} </span>
+                                <h1 class="m-0">${albumTitle}</h1>
+                           </div>
+                            <div class="albumStats">
+                                <p class="mb-2">${artistName}</p>
+                                <div class="d-flex">
+                                    <p class="mb-0">
+                                        <span><a>Spotify</a></span>
+                                        <span>.</span>
+                                        <span>${fans} fans</span>
+                                        <span>.</span>
+                                        <span>${nbTracks}, songs</span>
+                                        <span>Songs</span>
+                                        <span id="albumTotalDur"> ${duration}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>  
+    `
+}
+
+function loadAlbumInfo(){
+    let htmlToInsert = document.querySelector('header#topBar')
+    
+    let imgSrc = dataFromAlbum.cover_medium
+    let albumTitle = dataFromAlbum.title
+    let artistName = dataFromAlbum.artist.name
+    let nbFans = dataFromAlbum.fans
+    let nbTracks = dataFromAlbum.nb_tracks
+    let albumDur = dataFromAlbum.duration
+    let mainGenre = dataFromAlbum.genres.data[0].name
+    
+    htmlToInsert.insertAdjacentHTML('afterend', `${setAlbumInfoHTML(
+            imgSrc, albumTitle, artistName, nbFans, nbTracks, albumDur, mainGenre
+        )}`)
+}
+
+async function loadAlbumDetails(albumId, albumEndpoint){
+    await sendRequestToApi(dataFromAlbum, albumId, albumEndpoint)
+    loadAlbumInfo()
+    loadTracksDetails()
+
+}
+
+function setTracksHTML(trackNumber, trackAlbumSrc, trackName, trackAuthor, trackAlbumName, trackRank, trackDur){
+    return`
+        <div class="row justify-content-between p-0 py-3 px-4 m-0 trackStats">
+            <div class="trackNumber d-flex justify-content-center align-items-center">
+                <span class=" d-flex align-items-center justify-content-center modTranslate">${trackNumber}</span>
+            </div>
+            <div class="col-md-5 col-8 trackName d-flex align-items-center">
+                <img src="${trackAlbumSrc}" alt="">
+                <div class="d-flex flex-column pl-3 tableMusicTitle ">
+                    <p class="text-truncate m-0 p-0">${trackName}</p>
+                    <span class="mod-font-size-small mod-text-colorFadedWhite m-0 p-0">${trackAuthor}</span>
+                </div>
+            </div>
+            <div class="col trackAlbum d-none d-md-flex justify-content-center align-items-center mod-font-size-small mod-text-colorFadedWhite">
+                ${trackAlbumName}</div>
+            <div class="col trackDateAdded d-none d-lg-flex justify-content-center align-items-center mod-font-size-small mod-text-colorFadedWhite">
+                ${trackRank}</div>
+            <div class="col p-0 trackDuration d-flex justify-content-center align-items-center  mod-font-size-small mod-text-colorFadedWhite">
+                <span>${trackDur}</span>
+            </div>
+        </div> 
+    `
+    
+}
+
+function loadTracksDetails(){
+    let tableHeader = document.getElementById('tableHeader')
+
+    
+    let trackAlbumSrc = dataFromAlbum.cover_medium
+    let albumName = dataFromAlbum.title
+    let albumTracks = dataFromAlbum.tracks.data
+
+    let nbTracks = dataFromAlbum.tracks.data.length
+
+    albumTracks.forEach((track, i) =>{
+        tableHeader.insertAdjacentHTML('afterend',`${setTracksHTML(nbTracks - i, trackAlbumSrc,
+            track.title, track.artist.name, albumName, track.rank, track.duration
+            )}` )
+    })
+
+}
