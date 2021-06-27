@@ -54,7 +54,6 @@ function loadCardSections() {
     generateSections('Best_Music', 0, 7)
     generateSections('Chilling', 7, 14)
     generateSections('Relax', 14, 21)
-
 }
 
 window.onload = () => {
@@ -85,8 +84,6 @@ function generateSections(sectionIdName, sliceInitial, sliceFinal) {
 function generateSectionTitle(sectionTitle) {
     let sectionContainer = document.querySelector(`#${sectionTitle}`)
     let sectionTitleRemoved_ = sectionTitle.replace('_', ' ')
-
-
 
     sectionContainer.insertAdjacentHTML('afterbegin', `
          <div class="col-12 p-0 d-flex justify-content-between align-items-center">
