@@ -7,7 +7,7 @@ async function getSearchValue(e){
     let sections = document.querySelectorAll('section')
     sections.forEach(section => section.remove())
     createSearchSection()
-    createCardFromSearchSectionHTML(0, 16)
+    createCardFromSearchSectionHTML(0, 14)
 }
 
 function createSearchSection(){
