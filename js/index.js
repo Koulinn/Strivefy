@@ -49,6 +49,8 @@ function loadPageHTML() {
 
 window.onload = () => {
     sendRequestToApi('sun')
+    let albumId = new URLSearchParams(window.location.search).get("album_Id")
+    console.log(albumId)
 }
 
 
@@ -150,15 +152,6 @@ function addColClassesToCards(sectionTitle) {
         }
     })
 }
-
-
-//card col flex-nowrap card-square d-none d-md-flex
-
-//card col flex-nowrap d-none d-xxl-flex card-square
-
-
-
-
 
 
 
