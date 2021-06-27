@@ -81,6 +81,11 @@ h1 {
     color: var(--fadedWhite)
 }
 
+#tableHeader{
+    position: sticky;
+    top: 86px;
+}
+
 #trackTable {
     color: white;
     background: rgb(24, 24, 24);
