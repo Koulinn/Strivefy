@@ -24,9 +24,9 @@ function createHtmlContent(HTMLTag, innerText, ArrClassesToAdd, HtmlNodeSelector
 let dataFromAPI
 
 
-const getDataFromAPI = async (query) => {
+const getDataFromAPI = async (query, endpoint = 'search?q=') => {
     try {
-        let response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + query)
+        let response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/${endpoint}` + query)
         let dataRequested = await response.json()
         return dataRequested
     } catch (e) {
@@ -50,7 +50,7 @@ function loadPageHTML() {
 window.onload = () => {
     sendRequestToApi('sun')
     let albumId = new URLSearchParams(window.location.search).get("album_Id")
-    console.log(albumId)
+    
 }
 
 
